@@ -139,7 +139,7 @@ export default function LeadForm() {
         <div className="relative h-full min-h-[400px] lg:min-h-auto rounded-2xl overflow-hidden shadow-2xl group">
              {/* Image */}
             <img 
-                src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1000&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1581578731117-104f2a412729?q=80&w=1000&auto=format&fit=crop"
                 alt="Professional Plumbing Crew"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
@@ -162,4 +162,3 @@ export default function LeadForm() {
     </section>
   );
 }
-
