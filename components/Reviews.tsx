@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { Star } from "lucide-react";
+import { Star, CheckCircle2 } from "lucide-react";
 
 const REVIEWS = [
   {
@@ -54,19 +53,16 @@ const REVIEWS = [
   }
 ];
 
+// Duplicate reviews to create seamless loop
+const CAROUSEL_REVIEWS = [...REVIEWS, ...REVIEWS];
+
 export default function Reviews() {
-  const [visibleCount, setVisibleCount] = useState(3);
-
-  const handleLoadMore = () => {
-    setVisibleCount((prev) => Math.min(prev + 3, REVIEWS.length));
-  };
-
   return (
-    <section className="py-20 bg-white text-black">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-white text-black overflow-hidden">
+      <div className="container mx-auto px-4 mb-12">
         
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6 border-b border-gray-200 pb-6">
+        <div className="flex flex-col md:flex-row justify-between items-end gap-6 border-b border-gray-200 pb-6">
           <div className="max-w-2xl">
             <h2 className="text-4xl font-black uppercase tracking-tight mb-2">
               What our clients say about us
@@ -76,7 +72,15 @@ export default function Reviews() {
             </p>
           </div>
           
-          <div className="text-right">
+          <div className="text-right flex flex-col items-end">
+            {/* Google Guaranteed Badge */}
+            <div className="flex items-center gap-2 bg-white border border-gray-200 shadow-sm px-3 py-1.5 rounded-full mb-3">
+                <div className="bg-green-500 rounded-full p-0.5">
+                    <CheckCircle2 className="w-4 h-4 text-white" strokeWidth={3} />
+                </div>
+                <span className="font-bold text-sm text-gray-700">Google Guaranteed</span>
+            </div>
+
             <div className="text-5xl font-black text-black mb-1">4.90</div>
             <div className="flex items-center gap-1 mb-1 justify-end">
                {[...Array(5)].map((_, i) => (
@@ -89,10 +93,16 @@ export default function Reviews() {
           </div>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {REVIEWS.slice(0, visibleCount).map((review) => (
-            <div key={review.id} className="bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+      </div>
+
+      {/* Marquee Carousel */}
+      <div className="relative w-full">
+        <div className="flex gap-6 animate-marquee w-max px-4">
+          {CAROUSEL_REVIEWS.map((review, index) => (
+            <div 
+                key={`${review.id}-${index}`} 
+                className="w-[350px] md:w-[450px] bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow whitespace-normal"
+            >
                <div className="flex items-center justify-between mb-4">
                   <div className="flex gap-1">
                     {[...Array(review.rating)].map((_, i) => (
@@ -102,7 +112,7 @@ export default function Reviews() {
                   <span className="text-xs font-bold text-gray-400 uppercase">{review.date}</span>
                </div>
                
-               <p className="text-gray-700 mb-6 leading-relaxed font-medium">
+               <p className="text-gray-700 mb-6 leading-relaxed font-medium min-h-[80px]">
                  "{review.text}"
                </p>
                
@@ -123,21 +133,7 @@ export default function Reviews() {
             </div>
           ))}
         </div>
-
-        {/* Load More */}
-        {visibleCount < REVIEWS.length && (
-          <div className="text-center">
-            <button 
-              onClick={handleLoadMore}
-              className="bg-transparent border-2 border-black text-black hover:bg-black hover:text-white px-8 py-3 rounded-full font-bold uppercase tracking-wide transition-all"
-            >
-              Load More
-            </button>
-          </div>
-        )}
-
       </div>
     </section>
   );
 }
-

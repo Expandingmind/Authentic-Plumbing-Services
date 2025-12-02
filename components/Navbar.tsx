@@ -22,7 +22,6 @@ export default function Navbar() {
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="text-lg md:text-xl lg:text-2xl font-bold uppercase tracking-tighter text-white flex items-center gap-2">
-          <Wrench className="text-gold w-6 h-6 md:w-8 md:h-8" strokeWidth={2.5} />
           <div>
              AUTHENTIC <span className="text-gold">PLUMBING</span> SERVICES
           </div>
