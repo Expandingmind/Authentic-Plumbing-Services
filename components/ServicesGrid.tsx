@@ -1,121 +1,122 @@
 import Link from "next/link";
 import { ArrowRight, Wrench, Droplets, AlertTriangle, Flame, Camera, Hammer } from "lucide-react";
 
+// Only 6 services as requested
 const SERVICES = [
   {
     title: "Commercial Plumbing",
-    description: "Complete plumbing solutions for businesses, retail stores, and offices.",
     icon: <Hammer className="w-8 h-8 text-gold" />,
-    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=600&auto=format&fit=crop" // Industrial pipes
+    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=600&auto=format&fit=crop"
   },
   {
     title: "Residential Plumbing",
-    description: "Expert home plumbing repairs, installations, and maintenance.",
     icon: <Wrench className="w-8 h-8 text-gold" />,
-    image: "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?q=80&w=600&auto=format&fit=crop" // Plumber under sink
+    image: "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?q=80&w=600&auto=format&fit=crop"
   },
   {
     title: "Toilet Clog & Backup",
-    description: "Fast removal of stubborn clogs and sewer line backups.",
     icon: <Droplets className="w-8 h-8 text-gold" />,
-    image: "https://images.unsplash.com/photo-1584622050111-993a426fbf0a?q=80&w=600&auto=format&fit=crop" // Bathroom/Toilet area
+    image: "https://images.unsplash.com/photo-1584622050111-993a426fbf0a?q=80&w=600&auto=format&fit=crop"
   },
   {
-    title: "Shower & Bathroom Leaks",
-    description: "Leak detection and repair for showers, tubs, and sinks.",
-    icon: <Droplets className="w-8 h-8 text-gold" />,
-    image: "https://images.unsplash.com/photo-1564540582763-c368c1980685?q=80&w=600&auto=format&fit=crop" // Shower head/water
-  },
-  {
-    title: "Emergency Plumbing (24/7)",
-    description: "Immediate response for burst pipes, floods, and critical failures.",
+    title: "Emergency Plumbing",
     icon: <AlertTriangle className="w-8 h-8 text-gold" />,
-    image: "https://images.unsplash.com/photo-1621905252507-b35a83265532?q=80&w=600&auto=format&fit=crop" // Emergency/Tools
+    image: "https://images.unsplash.com/photo-1621905252507-b35a83265532?q=80&w=600&auto=format&fit=crop"
   },
   {
-    title: "Hydrojet Drain Cleaning",
-    description: "High-pressure water jetting to clear grease and sludge.",
-    icon: <Droplets className="w-8 h-8 text-gold" />,
-    image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=600&auto=format&fit=crop" // Water/Pipes
-  },
-  {
-    title: "Tankless Water Heaters",
-    description: "Installation and repair of energy-efficient tankless systems.",
+    title: "Water Heaters",
     icon: <Flame className="w-8 h-8 text-gold" />,
-    image: "https://images.unsplash.com/photo-1521207418485-99c705420785?q=80&w=600&auto=format&fit=crop" // Heater/Industrial
+    image: "https://images.unsplash.com/photo-1521207418485-99c705420785?q=80&w=600&auto=format&fit=crop"
   },
   {
-    title: "Camera Pipe Inspection",
-    description: "Non-invasive video inspection to locate hidden pipe issues.",
-    icon: <Camera className="w-8 h-8 text-gold" />,
-    image: "https://images.unsplash.com/photo-1574360773950-3634164a7cc2?q=80&w=600&auto=format&fit=crop" // Inspection/Dark pipe
-  },
-  {
-    title: "Drain Maintenance",
-    description: "Preventative cleaning to keep your drains flowing freely.",
-    icon: <Wrench className="w-8 h-8 text-gold" />,
-    image: "https://images.unsplash.com/photo-1599658880436-c61792e70672?q=80&w=600&auto=format&fit=crop" // Drain/Tools
+    title: "Drain Cleaning",
+    icon: <Droplets className="w-8 h-8 text-gold" />,
+    image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=600&auto=format&fit=crop"
   }
 ];
 
 export default function ServicesGrid() {
   return (
-    <section id="services" className="bg-zinc-900 py-20 lg:py-28">
-      <div className="container mx-auto px-4">
-        
-        {/* Header */}
-        <div className="text-center max-w-4xl mx-auto mb-16">
-          <span className="text-gold font-bold tracking-widest uppercase text-sm mb-2 block">
-            Expert Craftsmanship
-          </span>
-          <h2 className="text-4xl md:text-5xl font-black text-white uppercase mb-6">
-            Explore Our Plumbing Services
-          </h2>
-          <p className="text-gray-300 text-lg leading-relaxed">
-            At Authentic Plumbing Services, we handle everything from minor leaks to full-scale plumbing projects. Our team combines experience, honest pricing, and dependable service—day or night.
-          </p>
-        </div>
+    <section id="services" className="bg-zinc-900 py-20 lg:py-28 relative overflow-hidden">
+      {/* Dark Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-zinc-900/95 z-10" />
+        <img 
+            src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2560&auto=format&fit=crop" 
+            alt="Plumbing Services Background" 
+            className="w-full h-full object-cover opacity-20 grayscale"
+        />
+      </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {SERVICES.map((service, idx) => (
-            <div key={idx} className="group relative h-[400px] rounded-xl overflow-hidden cursor-pointer shadow-xl">
-              
-              {/* Background Image */}
-              <img 
-                src={service.image} 
-                alt={service.title}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-              />
-              
-              {/* Dark Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 group-hover:opacity-80 transition-opacity duration-300" />
-              
-              {/* Content Overlay */}
-              <div className="absolute inset-0 p-8 flex flex-col justify-between z-10">
-                 {/* Top Logo */}
-                 <div className="w-fit">
-                    <div className="bg-white/10 backdrop-blur-md p-3 rounded-full border border-white/20 text-gold">
-                         {service.icon}
-                    </div>
-                 </div>
-
-                 {/* Bottom Text */}
-                 <div>
-                    <h3 className="text-2xl font-bold text-white uppercase mb-3 drop-shadow-lg">
-                        {service.title}
-                    </h3>
-                    
-                    {/* Blue/Gold Bar (CTA) */}
-                    <div className="bg-blue-600 text-white font-bold uppercase tracking-wide py-3 px-4 rounded-lg text-center transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                        Book A Free Quote
-                    </div>
-                 </div>
-              </div>
+      <div className="container mx-auto px-4 relative z-20">
+        <div className="flex flex-col lg:flex-row gap-12 items-start">
+            
+            {/* Left Content */}
+            <div className="lg:w-1/3 lg:sticky lg:top-32">
+                <span className="text-gold font-bold tracking-widest uppercase text-sm mb-4 block">
+                    Expert Craftsmanship
+                </span>
+                <h2 className="text-5xl md:text-6xl font-black text-white uppercase mb-6 leading-tight">
+                    Explore Our <br/> Services
+                </h2>
+                <p className="text-gray-300 text-lg leading-relaxed mb-8">
+                    Our mission at Authentic Plumbing Services is to enhance the lives of our clients by providing high-quality plumbing solutions that combine efficiency with structural integrity.
+                </p>
+                
+                <Link 
+                    href="#contact" 
+                    className="inline-flex bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-black text-lg uppercase tracking-wide transition-all hover:scale-105 shadow-lg shadow-blue-600/20 items-center gap-2"
+                >
+                    Book a Free Quote <ArrowRight size={20} />
+                </Link>
             </div>
-          ))}
-        </div>
 
+            {/* Right Grid */}
+            <div className="lg:w-2/3 w-full">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {SERVICES.map((service, idx) => (
+                        <div key={idx} className="group relative h-[280px] overflow-hidden cursor-pointer border border-white/10 hover:border-gold/50 transition-all duration-300">
+                            
+                            {/* Background Image */}
+                            <img 
+                                src={service.image} 
+                                alt={service.title}
+                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                            />
+                            
+                            {/* Dark Gradient Overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300" />
+                            
+                            {/* Top Left Icon */}
+                            <div className="absolute top-4 left-4 bg-white/10 backdrop-blur-md p-2 rounded-lg border border-white/20">
+                                {service.icon}
+                            </div>
+
+                            {/* Bottom Blue Bar */}
+                            <div className="absolute bottom-0 left-0 w-full bg-blue-600 text-white text-center py-4 font-bold uppercase tracking-wide transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-20">
+                                {service.title}
+                            </div>
+
+                            {/* Static Title (Hidden on Hover) */}
+                            <div className="absolute bottom-0 left-0 w-full bg-black/80 text-white text-center py-4 font-bold uppercase tracking-wide transform translate-y-0 group-hover:translate-y-full transition-transform duration-300 z-10">
+                                {service.title}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Expand Button */}
+                <div className="mt-8 text-center">
+                    <Link 
+                        href="#services" 
+                        className="inline-flex items-center text-gray-400 hover:text-white font-bold uppercase tracking-wide transition-colors border-b-2 border-transparent hover:border-gold pb-1"
+                    >
+                        View All Services <ArrowRight size={16} className="ml-2" />
+                    </Link>
+                </div>
+            </div>
+
+        </div>
       </div>
     </section>
   );
