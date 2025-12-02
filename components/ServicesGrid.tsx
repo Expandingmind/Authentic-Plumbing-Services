@@ -5,31 +5,37 @@ import { ArrowRight, Wrench, Droplets, AlertTriangle, Flame, Camera, Hammer } fr
 const SERVICES = [
   {
     title: "Commercial Plumbing",
+    slug: "commercial-plumbing",
     icon: <Hammer className="w-8 h-8 text-gold" />,
     image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=600&auto=format&fit=crop"
   },
   {
     title: "Residential Plumbing",
+    slug: "residential-plumbing",
     icon: <Wrench className="w-8 h-8 text-gold" />,
     image: "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?q=80&w=600&auto=format&fit=crop"
   },
   {
     title: "Toilet Clog & Backup",
+    slug: "toilet-clog-backup",
     icon: <Droplets className="w-8 h-8 text-gold" />,
     image: "https://images.unsplash.com/photo-1584622050111-993a426fbf0a?q=80&w=600&auto=format&fit=crop"
   },
   {
     title: "Emergency Plumbing",
+    slug: "emergency-plumbing",
     icon: <AlertTriangle className="w-8 h-8 text-gold" />,
     image: "https://images.unsplash.com/photo-1621905252507-b35a83265532?q=80&w=600&auto=format&fit=crop"
   },
   {
     title: "Water Heaters",
+    slug: "water-heaters",
     icon: <Flame className="w-8 h-8 text-gold" />,
     image: "https://images.unsplash.com/photo-1521207418485-99c705420785?q=80&w=600&auto=format&fit=crop"
   },
   {
     title: "Drain Cleaning",
+    slug: "drain-cleaning",
     icon: <Droplets className="w-8 h-8 text-gold" />,
     image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=600&auto=format&fit=crop"
   }
@@ -75,7 +81,7 @@ export default function ServicesGrid() {
             <div className="lg:w-2/3 w-full">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {SERVICES.map((service, idx) => (
-                        <div key={idx} className="group relative h-[280px] overflow-hidden cursor-pointer border border-white/10 hover:border-gold/50 transition-all duration-300">
+                        <Link href={`/services/${service.slug}`} key={idx} className="group relative h-[280px] overflow-hidden cursor-pointer border border-white/10 hover:border-gold/50 transition-all duration-300 block">
                             
                             {/* Background Image */}
                             <img 
@@ -101,7 +107,7 @@ export default function ServicesGrid() {
                             <div className="absolute bottom-0 left-0 w-full bg-black/80 text-white text-center py-4 font-bold uppercase tracking-wide transform translate-y-0 group-hover:translate-y-full transition-transform duration-300 z-10">
                                 {service.title}
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
 
