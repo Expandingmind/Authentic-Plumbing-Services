@@ -17,7 +17,7 @@ const PROJECTS = [
     category: "Drain & Sewer",
     title: "Main Line Clog Clearance",
     description: "Hydrojetting a blocked sewer line for a commercial property.",
-    image: "https://images.unsplash.com/photo-1595814433015-e6f5ce69614e?q=80&w=600&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1616401784845-180886ba9ca8?q=80&w=600&auto=format&fit=crop"
   },
   {
     id: 3,
@@ -31,21 +31,21 @@ const PROJECTS = [
     category: "Emergencies",
     title: "Burst Pipe Repair",
     description: "Emergency response at 2 AM to fix a flooded kitchen.",
-    image: "https://images.unsplash.com/photo-1540428085067-035972987f9c?q=80&w=600&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?q=80&w=600&auto=format&fit=crop"
   },
   {
     id: 5,
     category: "Kitchens & Bathrooms",
     title: "Kitchen Sink Replacement",
     description: "Upgrading to a farm-style sink with new garbage disposal.",
-    image: "https://images.unsplash.com/photo-1565183997392-2f6f122e5912?q=80&w=600&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=600&auto=format&fit=crop"
   },
   {
     id: 6,
     category: "Drain & Sewer",
     title: "Storm Drain Cleaning",
     description: "Clearing debris from parking lot storm drains.",
-    image: "https://images.unsplash.com/photo-1580674684081-7617fbf3d745?q=80&w=600&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1574360773950-3634164a7cc2?q=80&w=600&auto=format&fit=crop"
   },
 ];
 

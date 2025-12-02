@@ -13,7 +13,7 @@ export default function About() {
             <div className="absolute -bottom-4 -right-4 w-24 h-24 border-2 border-gold z-0 rounded-br-3xl" />
             
             <img 
-              src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=1200&auto=format&fit=crop" 
+              src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1200&auto=format&fit=crop" 
               alt="Authentic Plumbing Technician" 
               className="relative z-10 w-full h-auto rounded-xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-500"
             />

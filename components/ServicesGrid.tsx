@@ -6,7 +6,7 @@ const SERVICES = [
     title: "Commercial Plumbing",
     description: "Complete plumbing solutions for businesses, retail stores, and offices.",
     icon: <Hammer className="w-10 h-10 text-gold" />,
-    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=600&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?q=80&w=600&auto=format&fit=crop"
   },
   {
     title: "Residential Plumbing",
@@ -18,31 +18,31 @@ const SERVICES = [
     title: "Toilet Clog & Backup",
     description: "Fast removal of stubborn clogs and sewer line backups.",
     icon: <Droplets className="w-10 h-10 text-gold" />,
-    image: "https://images.unsplash.com/photo-1564540582763-c368c1980685?q=80&w=600&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?q=80&w=600&auto=format&fit=crop"
   },
   {
     title: "Shower & Bathroom Leaks",
     description: "Leak detection and repair for showers, tubs, and sinks.",
     icon: <Droplets className="w-10 h-10 text-gold" />,
-    image: "https://images.unsplash.com/photo-1620626012861-84a7c24ec250?q=80&w=600&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?q=80&w=600&auto=format&fit=crop"
   },
   {
     title: "Emergency Plumbing (24/7)",
     description: "Immediate response for burst pipes, floods, and critical failures.",
     icon: <AlertTriangle className="w-10 h-10 text-gold" />,
-    image: "https://images.unsplash.com/photo-1632759143294-57a1b5615a70?q=80&w=600&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=600&auto=format&fit=crop"
   },
   {
     title: "Hydrojet Drain Cleaning",
     description: "High-pressure water jetting to clear grease and sludge.",
     icon: <Droplets className="w-10 h-10 text-gold" />,
-    image: "https://images.unsplash.com/photo-1616401784845-180886ba9ca8?q=80&w=600&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1609619590791-66966d57d5b9?q=80&w=600&auto=format&fit=crop"
   },
   {
     title: "Tankless Water Heaters",
     description: "Installation and repair of energy-efficient tankless systems.",
     icon: <Flame className="w-10 h-10 text-gold" />,
-    image: "https://images.unsplash.com/photo-1521207418485-99c705420785?q=80&w=600&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1544617402-7df9b6318463?q=80&w=600&auto=format&fit=crop"
   },
   {
     title: "Camera Pipe Inspection",
@@ -54,7 +54,7 @@ const SERVICES = [
     title: "Drain Maintenance",
     description: "Preventative cleaning to keep your drains flowing freely.",
     icon: <Wrench className="w-10 h-10 text-gold" />,
-    image: "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?q=80&w=600&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1632759143294-57a1b5615a70?q=80&w=600&auto=format&fit=crop"
   }
 ];
 

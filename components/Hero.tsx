@@ -9,7 +9,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/60 z-10" /> {/* Dark Overlay */}
         {/* Placeholder image for plumbing/city feel */}
         <img 
-          src="https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2560&auto=format&fit=crop" 
+          src="https://images.unsplash.com/photo-1533633354775-00f9573b5c91?q=80&w=2560&auto=format&fit=crop" 
           alt="Miami City Skyline and Plumbing Background" 
           className="w-full h-full object-cover object-center"
         />
