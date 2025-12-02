@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Authentic Plumbing Services
 
-## Getting Started
+A modern, mobile-first marketing website for **Authentic Plumbing Services** in Miami, FL. Built with Next.js 15, Tailwind CSS, and React.
 
-First, run the development server:
+![Authentic Plumbing Services](https://github.com/Expandingmind/Authentic-Plumbing-Services/raw/main/public/opengraph-image.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Quick Deploy
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Click the button below to deploy this website to Vercel instantly. This will set up the project, build the site, and give you a live URL.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FExpandingmind%2FAuthentic-Plumbing-Services)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠 Technologies
 
-## Learn More
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Deployment**: [Vercel](https://vercel.com/)
 
-To learn more about Next.js, take a look at the following resources:
+## 📂 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `/app`: Main application routes and layout.
+- `/components`: Reusable UI components (Hero, Navbar, Services, etc.).
+- `/public`: Static assets.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎨 Brand Colors
 
-## Deploy on Vercel
+- **Primary**: Black (`#000000`)
+- **Accent**: Gold (`#FFD700`)
+- **Text**: White (`#FFFFFF`) & Light Gray (`#F5F5F5`)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📞 Contact Info
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Phone**: (561) 765-5116
+- **Email**: authenticplumbingservicesfl@gmail.com
+- **Service Area**: Miami, FL & Surrounding Areas
+- **Hours**: Open 24 Hours – 7 Days a Week
+
+---
+
+© 2025 Authentic Plumbing Services. All rights reserved.
