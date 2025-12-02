@@ -14,21 +14,10 @@ const NAV_LINKS = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-black/95 backdrop-blur-md py-3 shadow-md" : "bg-transparent py-6"
-      }`}
+      className="fixed top-0 left-0 w-full z-50 bg-black py-4 shadow-md"
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
