@@ -10,7 +10,7 @@ const PROJECTS = [
     category: "Kitchens & Bathrooms",
     title: "Luxury Master Bath Remodel",
     description: "Complete repiping and fixture installation for a modern Miami home.",
-    image: "/emergencyplumbing.png"
+    image: "/tick-11.png"
   },
   {
     id: 2,
@@ -31,14 +31,14 @@ const PROJECTS = [
     category: "Emergencies",
     title: "Burst Pipe Repair",
     description: "Emergency response at 2 AM to fix a flooded kitchen.",
-    image: "/emergencyplumbing.png"
+    image: "/tick-12.png"
   },
   {
     id: 5,
     category: "Kitchens & Bathrooms",
     title: "Kitchen Sink Replacement",
     description: "Upgrading to a farm-style sink with new garbage disposal.",
-    image: "/emergencyplumbing.png"
+    image: "/tick-10.png"
   },
   {
     id: 6,

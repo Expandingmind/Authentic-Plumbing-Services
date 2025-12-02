@@ -13,7 +13,7 @@ const SERVICES = [
     title: "Residential Plumbing",
     slug: "residential-plumbing",
     icon: <Wrench className="w-8 h-8 text-gold" />,
-    image: "/emergencyplumbing.png"
+    image: "/tick-9.png"
   },
   {
     title: "Toilet Clog & Backup",
@@ -48,7 +48,7 @@ export default function ServicesGrid() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-zinc-900/95 z-10" />
         <img 
-            src="/draincleaning.png" 
+            src="/tick-13.png" 
             alt="Plumbing Services Background" 
             className="w-full h-full object-cover opacity-20 grayscale"
         />

@@ -16,7 +16,7 @@ const SERVICES_DATA: Record<string, any> = {
   },
   "residential-plumbing": {
     title: "Residential Plumbing Services",
-    image: "/emergencyplumbing.png",
+    image: "/tick-9.png",
     description: "Transform your home with our expert residential plumbing services. Whether it's a kitchen upgrade, bathroom renovation, or emergency repair, we deliver results that exceed expectations."
   },
   "toilet-clog-backup": {
