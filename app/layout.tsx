@@ -13,10 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Authentic Plumbing Services | 24/7 Plumber in Miami, FL",
+  title: "Authentic Plumbing Services | #1 Plumber in Miami",
   description: "Expert residential and commercial plumbing services in Miami, FL. Available 24/7 for emergencies. Licensed, insured, and trusted. Book a free quote today!",
   openGraph: {
-    title: "Authentic Plumbing Services | Miami's Trusted Plumbers",
+    title: "Authentic Plumbing Services | #1 Plumber in Miami",
     description: "24/7 Emergency Plumbing, Leak Repair, Drain Cleaning & More.",
     type: "website",
     locale: "en_US",
