@@ -22,7 +22,7 @@ export default function CommercialResidential() {
           {/* Commercial Card */}
           <div className="group relative overflow-hidden rounded-3xl aspect-[4/3] lg:aspect-auto lg:h-[500px]">
             <img 
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1000&auto=format&fit=crop" 
+              src="/commercialplumbing.png" 
               alt="Commercial Plumbing" 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-40"
             />
@@ -48,7 +48,7 @@ export default function CommercialResidential() {
           {/* Residential Card */}
           <div className="group relative overflow-hidden rounded-3xl aspect-[4/3] lg:aspect-auto lg:h-[500px]">
             <img 
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop" 
+              src="/emergencyplumbing.png" 
               alt="Residential Plumbing" 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-40"
             />

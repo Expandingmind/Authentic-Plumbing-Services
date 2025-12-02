@@ -7,37 +7,37 @@ const SERVICES = [
     title: "Commercial Plumbing",
     slug: "commercial-plumbing",
     icon: <Hammer className="w-8 h-8 text-gold" />,
-    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=600&auto=format&fit=crop"
+    image: "/commercialplumbing.png"
   },
   {
     title: "Residential Plumbing",
     slug: "residential-plumbing",
     icon: <Wrench className="w-8 h-8 text-gold" />,
-    image: "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?q=80&w=600&auto=format&fit=crop"
+    image: "/emergencyplumbing.png"
   },
   {
     title: "Toilet Clog & Backup",
     slug: "toilet-clog-backup",
     icon: <Droplets className="w-8 h-8 text-gold" />,
-    image: "https://images.unsplash.com/photo-1584622050111-993a426fbf0a?q=80&w=600&auto=format&fit=crop"
+    image: "/toilet-overflow.png"
   },
   {
     title: "Emergency Plumbing",
     slug: "emergency-plumbing",
     icon: <AlertTriangle className="w-8 h-8 text-gold" />,
-    image: "https://images.unsplash.com/photo-1621905252507-b35a83265532?q=80&w=600&auto=format&fit=crop"
+    image: "/emergencyplumbing.png"
   },
   {
     title: "Water Heaters",
     slug: "water-heaters",
     icon: <Flame className="w-8 h-8 text-gold" />,
-    image: "https://images.unsplash.com/photo-1521207418485-99c705420785?q=80&w=600&auto=format&fit=crop"
+    image: "/waterheaters.png"
   },
   {
     title: "Drain Cleaning",
     slug: "drain-cleaning",
     icon: <Droplets className="w-8 h-8 text-gold" />,
-    image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=600&auto=format&fit=crop"
+    image: "/draincleaning.png"
   }
 ];
 
@@ -48,7 +48,7 @@ export default function ServicesGrid() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-zinc-900/95 z-10" />
         <img 
-            src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2560&auto=format&fit=crop" 
+            src="/draincleaning.png" 
             alt="Plumbing Services Background" 
             className="w-full h-full object-cover opacity-20 grayscale"
         />

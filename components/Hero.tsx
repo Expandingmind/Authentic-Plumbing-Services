@@ -7,10 +7,9 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/70 z-10" /> {/* Dark Overlay */}
-        {/* Placeholder image for plumbing/city feel */}
-        <img 
-          src="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?q=80&w=2560&auto=format&fit=crop" 
-          alt="Plumbing Background" 
+        <img
+          src="/tick-2.png"
+          alt="Hero Background"
           className="w-full h-full object-cover object-center"
         />
       </div>

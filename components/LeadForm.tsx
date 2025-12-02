@@ -119,7 +119,7 @@ export default function LeadForm() {
             ) : (
                 <div className="h-full min-h-[400px] flex flex-col items-center justify-center text-center space-y-4">
                     <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                        <CheckCircle2 className="w-12 h-12 text-green-600" />
+                        <img src="/tick-2.png" alt="Success" className="w-12 h-12 object-contain" />
                     </div>
                     <h3 className="text-3xl font-black uppercase">Request Received!</h3>
                     <p className="text-gray-600 max-w-md">
@@ -139,7 +139,7 @@ export default function LeadForm() {
         <div className="relative h-full min-h-[400px] lg:min-h-auto rounded-2xl overflow-hidden shadow-2xl group">
              {/* Image */}
             <img 
-                src="https://images.unsplash.com/photo-1581578731117-104f2a412729?q=80&w=1000&auto=format&fit=crop"
+                src="/emergencyplumbing.png"
                 alt="Professional Plumbing Crew"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />

@@ -10,42 +10,42 @@ const PROJECTS = [
     category: "Kitchens & Bathrooms",
     title: "Luxury Master Bath Remodel",
     description: "Complete repiping and fixture installation for a modern Miami home.",
-    image: "https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=600&auto=format&fit=crop"
+    image: "/emergencyplumbing.png"
   },
   {
     id: 2,
     category: "Drain & Sewer",
     title: "Main Line Clog Clearance",
     description: "Hydrojetting a blocked sewer line for a commercial property.",
-    image: "https://images.unsplash.com/photo-1595814433015-e6f5ce69614e?q=80&w=600&auto=format&fit=crop"
+    image: "/toilet-overflow.png"
   },
   {
     id: 3,
     category: "Water Heaters",
     title: "Tankless Water Heater Install",
     description: "Energy-efficient upgrade for a family of five.",
-    image: "https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?q=80&w=600&auto=format&fit=crop"
+    image: "/waterheaters.png"
   },
   {
     id: 4,
     category: "Emergencies",
     title: "Burst Pipe Repair",
     description: "Emergency response at 2 AM to fix a flooded kitchen.",
-    image: "https://images.unsplash.com/photo-1540428085067-035972987f9c?q=80&w=600&auto=format&fit=crop"
+    image: "/emergencyplumbing.png"
   },
   {
     id: 5,
     category: "Kitchens & Bathrooms",
     title: "Kitchen Sink Replacement",
     description: "Upgrading to a farm-style sink with new garbage disposal.",
-    image: "https://images.unsplash.com/photo-1584622050111-993a426fbf0a?q=80&w=600&auto=format&fit=crop"
+    image: "/emergencyplumbing.png"
   },
   {
     id: 6,
     category: "Drain & Sewer",
     title: "Storm Drain Cleaning",
     description: "Clearing debris from parking lot storm drains.",
-    image: "https://images.unsplash.com/photo-1574360773950-3634164a7cc2?q=80&w=600&auto=format&fit=crop"
+    image: "/draincleaning.png"
   },
 ];
 

@@ -11,32 +11,32 @@ export const dynamic = 'force-static';
 const SERVICES_DATA: Record<string, any> = {
   "commercial-plumbing": {
     title: "Commercial Plumbing Services",
-    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1200&auto=format&fit=crop",
+    image: "/commercialplumbing.png",
     description: "At Authentic Plumbing Services, we specialize in commercial plumbing solutions that keep your business running smoothly. Based in Miami, FL, and serving nearby areas, our expert team offers custom plumbing systems tailored to your industry needs."
   },
   "residential-plumbing": {
     title: "Residential Plumbing Services",
-    image: "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?q=80&w=1200&auto=format&fit=crop",
+    image: "/emergencyplumbing.png",
     description: "Transform your home with our expert residential plumbing services. Whether it's a kitchen upgrade, bathroom renovation, or emergency repair, we deliver results that exceed expectations."
   },
   "toilet-clog-backup": {
     title: "Toilet Clog & Backup Services",
-    image: "https://images.unsplash.com/photo-1584622050111-993a426fbf0a?q=80&w=1200&auto=format&fit=crop",
+    image: "/toilet-overflow.png",
     description: "Fast and effective removal of stubborn toilet clogs and sewer line backups. We ensure your bathroom facilities are fully operational with minimal downtime."
   },
   "emergency-plumbing": {
     title: "Emergency Plumbing Services",
-    image: "https://images.unsplash.com/photo-1621905252507-b35a83265532?q=80&w=1200&auto=format&fit=crop",
+    image: "/emergencyplumbing.png",
     description: "Available 24/7 for critical plumbing failures. From burst pipes to severe leaks, our emergency response team is ready to protect your property."
   },
   "water-heaters": {
     title: "Water Heater Installation & Repair",
-    image: "https://images.unsplash.com/photo-1521207418485-99c705420785?q=80&w=1200&auto=format&fit=crop",
+    image: "/waterheaters.png",
     description: "Upgrade to energy-efficient tankless systems or repair your existing water heater. We ensure you have reliable hot water when you need it most."
   },
   "drain-cleaning": {
     title: "Drain Cleaning Services",
-    image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=1200&auto=format&fit=crop",
+    image: "/draincleaning.png",
     description: "Professional drain cleaning using hydrojet technology to clear grease, sludge, and debris. Keep your plumbing system flowing freely with our maintenance services."
   }
 };
@@ -160,4 +160,5 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     </main>
   );
 }
+
 
