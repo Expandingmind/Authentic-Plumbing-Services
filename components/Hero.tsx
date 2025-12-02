@@ -3,14 +3,14 @@ import { ArrowRight, CalendarClock } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative w-full min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+    <section id="home" className="relative w-full min-h-screen flex items-center justify-center pt-20 pb-32 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-black/60 z-10" /> {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/70 z-10" /> {/* Dark Overlay */}
         {/* Placeholder image for plumbing/city feel */}
         <img 
-          src="https://images.unsplash.com/photo-1533633354775-00f9573b5c91?q=80&w=2560&auto=format&fit=crop" 
-          alt="Miami City Skyline and Plumbing Background" 
+          src="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?q=80&w=2560&auto=format&fit=crop" 
+          alt="Plumbing Background" 
           className="w-full h-full object-cover object-center"
         />
       </div>
@@ -19,13 +19,13 @@ export default function Hero() {
       <div className="relative z-20 container mx-auto px-4 text-center flex flex-col items-center gap-6 mt-10 md:mt-0">
         
         {/* Headline */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white uppercase leading-tight tracking-tight max-w-5xl drop-shadow-lg">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white uppercase leading-tight tracking-tight max-w-5xl drop-shadow-lg">
           <span className="block">24/7 Plumbing Experts</span>
           <span className="block text-gold">In Miami, FL</span>
         </h1>
         
         {/* Subheadline */}
-        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white max-w-4xl uppercase drop-shadow-md">
+        <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-white max-w-4xl uppercase drop-shadow-md">
           Leaks, Clogs, Emergencies & Full-Service Plumbing
         </h2>
 
