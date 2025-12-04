@@ -58,16 +58,16 @@ const CAROUSEL_REVIEWS = [...REVIEWS, ...REVIEWS];
 
 export default function Reviews() {
   return (
-    <section className="py-20 bg-white text-black overflow-hidden">
-      <div className="container mx-auto px-4 mb-12">
+    <section className="py-12 lg:py-16 bg-white text-black overflow-hidden">
+      <div className="container mx-auto px-4 mb-8">
         
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-end gap-6 border-b border-gray-200 pb-6">
-          <div className="max-w-2xl">
-            <h2 className="text-4xl font-black uppercase tracking-tight mb-2">
+        <div className="flex flex-col md:flex-row justify-between items-end gap-4 border-b border-gray-200 pb-4">
+          <div className="max-w-xl">
+            <h2 className="text-3xl font-black uppercase tracking-tight mb-1">
               What our clients say about us
             </h2>
-            <p className="text-gray-600 font-medium">
+            <p className="text-gray-600 font-medium text-sm">
               Real reviews from real customers in Miami and beyond.
             </p>
           </div>
@@ -81,13 +81,13 @@ export default function Reviews() {
                 <span className="font-bold text-sm text-gray-700">Google Guaranteed</span>
             </div>
 
-            <div className="text-5xl font-black text-black mb-1">4.90</div>
+            <div className="text-4xl font-black text-black mb-1">4.90</div>
             <div className="flex items-center gap-1 mb-1 justify-end">
                {[...Array(5)].map((_, i) => (
-                 <Star key={i} className="w-5 h-5 fill-gold text-gold" />
+                 <Star key={i} className="w-4 h-4 fill-gold text-gold" />
                ))}
             </div>
-            <p className="text-sm text-gray-500 font-bold uppercase tracking-wide">
+            <p className="text-xs text-gray-500 font-bold uppercase tracking-wide">
               Based on 25+ Google Reviews
             </p>
           </div>
@@ -97,36 +97,36 @@ export default function Reviews() {
 
       {/* Marquee Carousel */}
       <div className="relative w-full">
-        <div className="flex gap-6 animate-marquee w-max px-4">
+        <div className="flex gap-4 animate-marquee w-max px-4">
           {CAROUSEL_REVIEWS.map((review, index) => (
             <div 
                 key={`${review.id}-${index}`} 
-                className="w-[350px] md:w-[450px] bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow whitespace-normal"
+                className="w-[300px] md:w-[380px] bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow whitespace-normal"
             >
-               <div className="flex items-center justify-between mb-4">
+               <div className="flex items-center justify-between mb-3">
                   <div className="flex gap-1">
                     {[...Array(review.rating)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-gold text-gold" />
+                        <Star key={i} className="w-3 h-3 fill-gold text-gold" />
                     ))}
                   </div>
                   <span className="text-xs font-bold text-gray-400 uppercase">{review.date}</span>
                </div>
                
-               <p className="text-gray-700 mb-6 leading-relaxed font-medium min-h-[80px]">
+               <p className="text-gray-700 mb-4 leading-relaxed font-medium text-sm min-h-[60px]">
                  "{review.text}"
                </p>
                
-               <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-zinc-200 rounded-full flex items-center justify-center text-gray-500 font-black text-sm">
+               <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 bg-zinc-200 rounded-full flex items-center justify-center text-gray-500 font-black text-xs">
                     {review.initials}
                   </div>
-                  <span className="font-bold text-black uppercase text-sm">
+                  <span className="font-bold text-black uppercase text-xs">
                     {review.name}
                   </span>
                   <div className="ml-auto">
                      {/* Google G icon placeholder */}
-                     <div className="w-6 h-6 rounded-full bg-white border border-gray-200 flex items-center justify-center">
-                        <span className="font-bold text-blue-500 text-xs">G</span>
+                     <div className="w-5 h-5 rounded-full bg-white border border-gray-200 flex items-center justify-center">
+                        <span className="font-bold text-blue-500 text-[10px]">G</span>
                      </div>
                   </div>
                </div>

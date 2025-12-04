@@ -8,7 +8,7 @@ export default function Hero() {
   const isLoaded = usePageLoadAnimation(100);
 
   return (
-    <section id="home" className="relative w-full min-h-screen flex items-center justify-center pt-20 pb-32 overflow-hidden">
+    <section id="home" className="relative w-full min-h-[85vh] flex items-center justify-center pt-20 pb-16 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/70 z-10" /> {/* Dark Overlay */}
@@ -20,7 +20,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 container mx-auto px-4 text-center flex flex-col items-center gap-6 mt-10 md:mt-0">
+      <div className="relative z-20 container mx-auto px-4 text-center flex flex-col items-center gap-4 mt-10 md:mt-0">
         
         {/* Headline */}
         <h1 className={`text-3xl md:text-5xl lg:text-6xl font-black text-white uppercase leading-tight tracking-tight max-w-5xl drop-shadow-lg reveal-hidden ${isLoaded ? 'reveal-visible' : ''}`}>
@@ -38,10 +38,10 @@ export default function Hero() {
         </p>
 
         {/* CTAs */}
-        <div className={`flex flex-col md:flex-row gap-4 mt-4 reveal-hidden delay-300 ${isLoaded ? 'reveal-visible' : ''}`}>
+        <div className={`flex flex-col md:flex-row gap-4 mt-2 reveal-hidden delay-300 ${isLoaded ? 'reveal-visible' : ''}`}>
           <Link 
             href="#contact" 
-            className="bg-gold hover:bg-gold-hover text-black px-8 py-4 rounded-full font-extrabold text-lg uppercase tracking-wide transition-all hover:scale-105 shadow-lg shadow-gold/30 flex items-center gap-2"
+            className="bg-gold hover:bg-gold-hover text-black px-6 py-3 rounded-full font-bold text-base uppercase tracking-wide transition-all hover:scale-105 shadow-lg shadow-gold/30 flex items-center gap-2"
           >
             <CalendarClock size={20} />
             Book a Free Quote
@@ -49,7 +49,7 @@ export default function Hero() {
         </div>
 
         {/* Availability */}
-        <div className={`mt-6 text-white/90 text-sm md:text-base font-semibold bg-black/40 backdrop-blur-sm px-6 py-2 rounded-full border border-white/10 reveal-hidden delay-500 ${isLoaded ? 'reveal-visible' : ''}`}>
+        <div className={`mt-4 text-white/90 text-sm font-semibold bg-black/40 backdrop-blur-sm px-5 py-2 rounded-full border border-white/10 reveal-hidden delay-500 ${isLoaded ? 'reveal-visible' : ''}`}>
           Open 24 Hours – 7 Days a Week • <a href="tel:5617655116" className="hover:text-gold underline decoration-gold/50 underline-offset-4">(561) 765-5116</a>
         </div>
 

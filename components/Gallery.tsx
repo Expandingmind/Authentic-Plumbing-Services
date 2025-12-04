@@ -59,15 +59,15 @@ export default function Gallery() {
     : PROJECTS.filter(p => p.category === activeCategory);
 
   return (
-    <section className="py-20 bg-white text-black" ref={ref}>
+    <section className="py-12 lg:py-16 bg-white text-black" ref={ref}>
       <div className="container mx-auto px-4">
         
         {/* Header */}
-        <div className={`text-center mb-12 reveal-hidden ${isVisible ? 'reveal-visible' : ''}`}>
-           <span className="text-gold-dark font-bold tracking-widest uppercase text-sm mb-2 block">
+        <div className={`text-center mb-8 reveal-hidden ${isVisible ? 'reveal-visible' : ''}`}>
+           <span className="text-gold-dark font-bold tracking-widest uppercase text-xs mb-1 block">
              Crafting Solutions, Protecting Your Home
            </span>
-           <h2 className="text-4xl md:text-5xl font-black uppercase mb-8">
+           <h2 className="text-3xl md:text-4xl font-black uppercase mb-6">
              Explore Our Recent Work
            </h2>
            
@@ -90,7 +90,7 @@ export default function Gallery() {
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {filteredProjects.map((project, idx) => (
                 <div 
                     key={project.id} 
