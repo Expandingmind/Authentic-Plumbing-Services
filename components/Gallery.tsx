@@ -59,25 +59,22 @@ export default function Gallery() {
     : PROJECTS.filter(p => p.category === activeCategory);
 
   return (
-    <section className="py-12 lg:py-16 bg-white text-black" ref={ref}>
+    <section className="py-8 lg:py-10 bg-white text-black" ref={ref}>
       <div className="container mx-auto px-4">
         
         {/* Header */}
-        <div className={`text-center mb-8 reveal-hidden ${isVisible ? 'reveal-visible' : ''}`}>
-           <span className="text-gold-dark font-bold tracking-widest uppercase text-xs mb-1 block">
-             Crafting Solutions, Protecting Your Home
-           </span>
-           <h2 className="text-3xl md:text-4xl font-black uppercase mb-6">
+        <div className={`text-center mb-5 reveal-hidden ${isVisible ? 'reveal-visible' : ''}`}>
+           <h2 className="text-2xl md:text-3xl font-black uppercase mb-4">
              Explore Our Recent Work
            </h2>
            
            {/* Tabs */}
-           <div className="flex flex-wrap justify-center gap-2 md:gap-4">
+           <div className="flex flex-wrap justify-center gap-2">
              {CATEGORIES.map((cat) => (
                <button
                  key={cat}
                  onClick={() => setActiveCategory(cat)}
-                 className={`px-6 py-2 rounded-full font-bold text-sm uppercase tracking-wide transition-all border-2 ${
+                 className={`px-4 py-1.5 rounded-full font-bold text-xs uppercase tracking-wide transition-all border ${
                    activeCategory === cat 
                      ? "bg-black text-white border-black" 
                      : "bg-transparent text-gray-500 border-gray-200 hover:border-black hover:text-black"
@@ -90,28 +87,28 @@ export default function Gallery() {
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
             {filteredProjects.map((project, idx) => (
                 <div 
                     key={project.id} 
-                    className={`group relative overflow-hidden rounded-xl cursor-pointer reveal-hidden ${isVisible ? 'reveal-visible' : ''}`}
-                    style={{ transitionDelay: `${idx * 100}ms` }}
+                    className={`group relative overflow-hidden rounded-lg cursor-pointer reveal-hidden ${isVisible ? 'reveal-visible' : ''}`}
+                    style={{ transitionDelay: `${idx * 50}ms` }}
                 >
                     <div className="aspect-[4/3] overflow-hidden bg-gray-200">
                         <img 
                             src={project.image} 
                             alt={project.title} 
-                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                         />
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <span className="text-gold text-xs font-bold uppercase mb-1">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                        <span className="text-gold text-[10px] font-bold uppercase mb-0.5">
                             {project.category}
                         </span>
-                        <h3 className="text-white font-bold text-lg mb-1">
+                        <h3 className="text-white font-bold text-sm mb-0.5">
                             {project.title}
                         </h3>
-                        <p className="text-gray-300 text-sm">
+                        <p className="text-gray-300 text-xs hidden md:block">
                             {project.description}
                         </p>
                     </div>
