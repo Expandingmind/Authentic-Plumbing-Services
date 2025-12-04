@@ -122,7 +122,7 @@ export default function ServicesGrid() {
                 </div>
 
                 {/* Expand Button */}
-                <div className={`mt-6 text-center reveal-hidden delay-500 ${isVisible ? 'reveal-visible' : ''}`}>>
+                <div className={`mt-6 text-center reveal-hidden delay-500 ${isVisible ? 'reveal-visible' : ''}`}>
                     <Link 
                         href="#services" 
                         className="inline-flex items-center text-gray-400 hover:text-white font-bold uppercase tracking-wide transition-colors border-b-2 border-transparent hover:border-gold pb-1"
