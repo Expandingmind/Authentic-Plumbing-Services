@@ -5,11 +5,11 @@ import Link from "next/link";
 import { Menu, X, Phone, Wrench } from "lucide-react";
 
 const NAV_LINKS = [
-  { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
-  { label: "About Us", href: "#about" },
-  { label: "Locations", href: "#locations" },
-  { label: "Contact Us", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "Services", href: "/#services" },
+  { label: "About Us", href: "/#about" },
+  { label: "Locations", href: "/#locations" },
+  { label: "Contact Us", href: "/#contact" },
 ];
 
 export default function Navbar() {
