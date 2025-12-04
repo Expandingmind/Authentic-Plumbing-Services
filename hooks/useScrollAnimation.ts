@@ -2,7 +2,16 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-export function useScrollAnimation(options = { threshold: 0.1, triggerOnce: true }) {
+interface ScrollAnimationOptions {
+  threshold?: number;
+  triggerOnce?: boolean;
+  rootMargin?: string;
+}
+
+export function useScrollAnimation(options: ScrollAnimationOptions = {}) {
+  // Default values
+  const { threshold = 0.1, triggerOnce = true, rootMargin = "0px" } = options;
+
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -11,16 +20,16 @@ export function useScrollAnimation(options = { threshold: 0.1, triggerOnce: true
       ([entry]) => { 
         if (entry.isIntersecting) {
           setIsVisible(true);
-          if (options.triggerOnce && ref.current) {
+          if (triggerOnce && ref.current) {
             observer.unobserve(ref.current);
           }
         } 
       },
-      options
+      { threshold, rootMargin }
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
-  }, [options]);
+  }, [threshold, triggerOnce, rootMargin]);
 
   return { ref, isVisible };
 }
@@ -30,4 +39,3 @@ export function usePageLoadAnimation(delay = 0) {
   useEffect(() => { setTimeout(() => setIsLoaded(true), delay); }, [delay]);
   return isLoaded;
 }
-
