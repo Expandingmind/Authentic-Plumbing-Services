@@ -1,4 +1,4 @@
-"Use client";
+"use client";
 
 import Link from "next/link";
 import { ArrowRight, CalendarClock } from "lucide-react";
