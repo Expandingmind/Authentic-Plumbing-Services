@@ -61,7 +61,7 @@ export default function ServicesGrid() {
         <div className="flex flex-col lg:flex-row gap-12 items-start">
             
             {/* Left Content */}
-            <div className={`lg:w-1/3 lg:sticky lg:top-32 transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
+            <div className={`lg:w-1/3 lg:sticky lg:top-32 reveal-hidden-left ${isVisible ? 'reveal-visible-x' : ''}`}>
                 <span className="text-gold font-bold tracking-widest uppercase text-sm mb-4 block">
                     Expert Craftsmanship
                 </span>
@@ -87,7 +87,7 @@ export default function ServicesGrid() {
                         <Link 
                             href={`/services/${service.slug}`} 
                             key={idx} 
-                            className={`group relative h-[280px] overflow-hidden cursor-pointer border border-white/10 hover:border-gold/50 transition-all duration-700 block ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+                            className={`group relative h-[280px] overflow-hidden cursor-pointer border border-white/10 hover:border-gold/50 transition-all duration-700 block reveal-hidden ${isVisible ? 'reveal-visible' : ''}`}
                             style={{ transitionDelay: `${idx * 100}ms` }}
                         >
                             
@@ -120,7 +120,7 @@ export default function ServicesGrid() {
                 </div>
 
                 {/* Expand Button */}
-                <div className={`mt-8 text-center transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                <div className={`mt-8 text-center reveal-hidden delay-500 ${isVisible ? 'reveal-visible' : ''}`}>
                     <Link 
                         href="#services" 
                         className="inline-flex items-center text-gray-400 hover:text-white font-bold uppercase tracking-wide transition-colors border-b-2 border-transparent hover:border-gold pb-1"

@@ -74,3 +74,36 @@ html {
 .animate-marquee:hover {
   animation-play-state: paused;
 }
+
+/* Animation Utilities - FORCING these styles to ensure they work */
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(2rem); /* Equivalent to translate-y-8 */
+  transition-property: all;
+  transition-duration: 700ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-hidden-left {
+  opacity: 0;
+  transform: translateX(-3rem); /* -translate-x-12 */
+  transition-property: all;
+  transition-duration: 700ms;
+}
+
+.reveal-hidden-right {
+  opacity: 0;
+  transform: translateX(3rem); /* translate-x-12 */
+  transition-property: all;
+  transition-duration: 700ms;
+}
+
+.reveal-visible-x {
+  opacity: 1;
+  transform: translateX(0);
+}

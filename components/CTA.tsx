@@ -11,7 +11,7 @@ export default function CTA() {
     <section className="py-16 bg-gold text-black" ref={ref}>
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
         
-        <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
+        <div className={`reveal-hidden-left ${isVisible ? 'reveal-visible-x' : ''}`}>
           <h2 className="text-3xl md:text-4xl font-black uppercase mb-3">
             Ready to Fix Your Plumbing Problem?
           </h2>
@@ -22,7 +22,7 @@ export default function CTA() {
 
         <Link 
           href="#contact" 
-          className={`btn-primary bg-black hover:bg-zinc-800 text-gold px-10 py-5 rounded-full font-black text-lg uppercase tracking-wide shadow-xl flex items-center gap-3 whitespace-nowrap transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}
+          className={`btn-primary bg-black hover:bg-zinc-800 text-gold px-10 py-5 rounded-full font-black text-lg uppercase tracking-wide shadow-xl flex items-center gap-3 whitespace-nowrap reveal-hidden-right delay-200 ${isVisible ? 'reveal-visible-x' : ''}`}
         >
           Book a Free Quote Now <ArrowRight />
         </Link>

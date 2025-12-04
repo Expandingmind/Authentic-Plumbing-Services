@@ -11,7 +11,7 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           
           {/* Left: Image */}
-          <div className={`relative transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
+          <div className={`relative reveal-hidden-left ${isVisible ? 'reveal-visible-x' : ''}`}>
             <div className="absolute -top-4 -left-4 w-24 h-24 bg-gold z-0 rounded-tl-3xl" />
             <div className="absolute -bottom-4 -right-4 w-24 h-24 border-2 border-gold z-0 rounded-br-3xl" />
             
@@ -29,7 +29,7 @@ export default function About() {
           </div>
 
           {/* Right: Content */}
-          <div className={`space-y-8 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
+          <div className={`space-y-8 reveal-hidden-right delay-200 ${isVisible ? 'reveal-visible-x' : ''}`}>
             <div>
                 <span className="text-gold font-bold tracking-widest uppercase text-sm mb-2 block">
                     Licensed & Insured

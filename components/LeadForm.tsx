@@ -28,7 +28,7 @@ export default function LeadForm() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
         
         {/* Left: Lead Form Card */}
-        <div className={`bg-white rounded-2xl shadow-2xl p-6 md:p-8 lg:p-10 text-black relative overflow-hidden transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
+        <div className={`bg-white rounded-2xl shadow-2xl p-6 md:p-8 lg:p-10 text-black relative overflow-hidden reveal-hidden-left ${isVisible ? 'reveal-visible-x' : ''}`}>
             <div className="absolute top-0 left-0 w-full h-2 bg-gold" />
             
             {!isSuccess ? (
@@ -138,7 +138,7 @@ export default function LeadForm() {
         </div>
 
         {/* Right: Crew Image Section */}
-        <div className={`relative h-full min-h-[400px] lg:min-h-auto rounded-2xl overflow-hidden shadow-2xl group transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
+        <div className={`relative h-full min-h-[400px] lg:min-h-auto rounded-2xl overflow-hidden shadow-2xl group reveal-hidden-right delay-200 ${isVisible ? 'reveal-visible-x' : ''}`}>
              {/* Image */}
             <img 
                 src="/emergencyplumbing.png"

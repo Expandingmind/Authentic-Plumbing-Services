@@ -63,7 +63,7 @@ export default function Gallery() {
       <div className="container mx-auto px-4">
         
         {/* Header */}
-        <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`text-center mb-12 reveal-hidden ${isVisible ? 'reveal-visible' : ''}`}>
            <span className="text-gold-dark font-bold tracking-widest uppercase text-sm mb-2 block">
              Crafting Solutions, Protecting Your Home
            </span>
@@ -94,7 +94,7 @@ export default function Gallery() {
             {filteredProjects.map((project, idx) => (
                 <div 
                     key={project.id} 
-                    className={`group relative overflow-hidden rounded-xl cursor-pointer transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+                    className={`group relative overflow-hidden rounded-xl cursor-pointer reveal-hidden ${isVisible ? 'reveal-visible' : ''}`}
                     style={{ transitionDelay: `${idx * 100}ms` }}
                 >
                     <div className="aspect-[4/3] overflow-hidden bg-gray-200">
