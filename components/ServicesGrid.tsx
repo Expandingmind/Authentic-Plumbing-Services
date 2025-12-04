@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, Wrench, Droplets, AlertTriangle, Flame, Camera, Hammer } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 // Only 6 services as requested
 const SERVICES = [
@@ -42,8 +43,10 @@ const SERVICES = [
 ];
 
 export default function ServicesGrid() {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
+
   return (
-    <section id="services" className="bg-zinc-900 py-20 lg:py-28 relative overflow-hidden">
+    <section id="services" className="bg-zinc-900 py-20 lg:py-28 relative overflow-hidden" ref={ref}>
       {/* Dark Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-zinc-900/95 z-10" />
@@ -58,7 +61,7 @@ export default function ServicesGrid() {
         <div className="flex flex-col lg:flex-row gap-12 items-start">
             
             {/* Left Content */}
-            <div className="lg:w-1/3 lg:sticky lg:top-32">
+            <div className={`lg:w-1/3 lg:sticky lg:top-32 transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
                 <span className="text-gold font-bold tracking-widest uppercase text-sm mb-4 block">
                     Expert Craftsmanship
                 </span>
@@ -71,7 +74,7 @@ export default function ServicesGrid() {
                 
                 <Link 
                     href="#contact" 
-                    className="inline-flex bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-black text-lg uppercase tracking-wide transition-all hover:scale-105 shadow-lg shadow-blue-600/20 items-center gap-2"
+                    className="btn-primary inline-flex bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-black text-lg uppercase tracking-wide shadow-lg shadow-blue-600/20 items-center gap-2"
                 >
                     Book a Free Quote <ArrowRight size={20} />
                 </Link>
@@ -81,7 +84,12 @@ export default function ServicesGrid() {
             <div className="lg:w-2/3 w-full">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {SERVICES.map((service, idx) => (
-                        <Link href={`/services/${service.slug}`} key={idx} className="group relative h-[280px] overflow-hidden cursor-pointer border border-white/10 hover:border-gold/50 transition-all duration-300 block">
+                        <Link 
+                            href={`/services/${service.slug}`} 
+                            key={idx} 
+                            className={`group relative h-[280px] overflow-hidden cursor-pointer border border-white/10 hover:border-gold/50 transition-all duration-700 block ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+                            style={{ transitionDelay: `${idx * 100}ms` }}
+                        >
                             
                             {/* Background Image */}
                             <img 
@@ -112,7 +120,7 @@ export default function ServicesGrid() {
                 </div>
 
                 {/* Expand Button */}
-                <div className="mt-8 text-center">
+                <div className={`mt-8 text-center transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                     <Link 
                         href="#services" 
                         className="inline-flex items-center text-gray-400 hover:text-white font-bold uppercase tracking-wide transition-colors border-b-2 border-transparent hover:border-gold pb-1"

@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import { CheckCircle2, Loader2 } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export default function LeadForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -22,11 +24,11 @@ export default function LeadForm() {
   };
 
   return (
-    <section className="relative z-30 -mt-20 pb-20 container mx-auto px-4">
+    <section className="relative z-30 -mt-20 pb-20 container mx-auto px-4" ref={ref}>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
         
         {/* Left: Lead Form Card */}
-        <div className="bg-white rounded-2xl shadow-2xl p-6 md:p-8 lg:p-10 text-black relative overflow-hidden">
+        <div className={`bg-white rounded-2xl shadow-2xl p-6 md:p-8 lg:p-10 text-black relative overflow-hidden transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
             <div className="absolute top-0 left-0 w-full h-2 bg-gold" />
             
             {!isSuccess ? (
@@ -106,7 +108,7 @@ export default function LeadForm() {
                         <button 
                             disabled={isSubmitting}
                             type="submit" 
-                            className="w-full bg-gold hover:bg-gold-hover text-black font-black text-lg uppercase py-4 rounded-lg shadow-lg transition-all hover:scale-[1.01] disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center gap-2"
+                            className="btn-primary w-full bg-gold hover:bg-gold-hover text-black font-black text-lg uppercase py-4 rounded-lg shadow-lg disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center gap-2"
                         >
                             {isSubmitting ? (
                                 <><Loader2 className="animate-spin" /> Sending...</>
@@ -118,7 +120,7 @@ export default function LeadForm() {
                 </>
             ) : (
                 <div className="h-full min-h-[400px] flex flex-col items-center justify-center text-center space-y-4">
-                    <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                    <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-4 animate-pulse-glow">
                         <img src="/tick-2.png" alt="Success" className="w-12 h-12 object-contain" />
                     </div>
                     <h3 className="text-3xl font-black uppercase">Request Received!</h3>
@@ -136,7 +138,7 @@ export default function LeadForm() {
         </div>
 
         {/* Right: Crew Image Section */}
-        <div className="relative h-full min-h-[400px] lg:min-h-auto rounded-2xl overflow-hidden shadow-2xl group">
+        <div className={`relative h-full min-h-[400px] lg:min-h-auto rounded-2xl overflow-hidden shadow-2xl group transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
              {/* Image */}
             <img 
                 src="/emergencyplumbing.png"

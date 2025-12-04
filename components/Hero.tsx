@@ -1,7 +1,10 @@
 import Link from "next/link";
 import { ArrowRight, CalendarClock } from "lucide-react";
+import { usePageLoadAnimation } from "@/hooks/useScrollAnimation";
 
 export default function Hero() {
+  const isLoaded = usePageLoadAnimation(100);
+
   return (
     <section id="home" className="relative w-full min-h-screen flex items-center justify-center pt-20 pb-32 overflow-hidden">
       {/* Background Image */}
@@ -18,22 +21,22 @@ export default function Hero() {
       <div className="relative z-20 container mx-auto px-4 text-center flex flex-col items-center gap-6 mt-10 md:mt-0">
         
         {/* Headline */}
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white uppercase leading-tight tracking-tight max-w-5xl drop-shadow-lg">
+        <h1 className={`text-3xl md:text-5xl lg:text-6xl font-black text-white uppercase leading-tight tracking-tight max-w-5xl drop-shadow-lg transition-all duration-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <span className="block">24/7 Plumbing Experts</span>
           <span className="block text-gold">In Miami, FL</span>
         </h1>
         
         {/* Subheadline */}
-        <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-white max-w-4xl uppercase drop-shadow-md">
+        <h2 className={`text-lg md:text-xl lg:text-2xl font-bold text-white max-w-4xl uppercase drop-shadow-md transition-all duration-700 delay-100 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           Leaks, Clogs, Emergencies & Full-Service Plumbing
         </h2>
 
-        <p className="text-gray-200 text-base md:text-lg max-w-2xl leading-relaxed drop-shadow-sm font-medium">
+        <p className={`text-gray-200 text-base md:text-lg max-w-2xl leading-relaxed drop-shadow-sm font-medium transition-all duration-700 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           Fast, reliable plumbing services for homes and businesses across Miami and surrounding areas. Licensed, insured, and available 24/7 for emergencies.
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-col md:flex-row gap-4 mt-4">
+        <div className={`flex flex-col md:flex-row gap-4 mt-4 transition-all duration-700 delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <Link 
             href="#contact" 
             className="bg-gold hover:bg-gold-hover text-black px-8 py-4 rounded-full font-extrabold text-lg uppercase tracking-wide transition-all hover:scale-105 shadow-lg shadow-gold/30 flex items-center gap-2"
@@ -44,7 +47,7 @@ export default function Hero() {
         </div>
 
         {/* Availability */}
-        <div className="mt-6 text-white/90 text-sm md:text-base font-semibold bg-black/40 backdrop-blur-sm px-6 py-2 rounded-full border border-white/10">
+        <div className={`mt-6 text-white/90 text-sm md:text-base font-semibold bg-black/40 backdrop-blur-sm px-6 py-2 rounded-full border border-white/10 transition-all duration-700 delay-500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           Open 24 Hours – 7 Days a Week • <a href="tel:5617655116" className="hover:text-gold underline decoration-gold/50 underline-offset-4">(561) 765-5116</a>
         </div>
 
