@@ -24,94 +24,91 @@ export default function LeadForm() {
   };
 
   return (
-    <section className="relative z-30 -mt-20 pb-20 container mx-auto px-4" ref={ref}>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+    <section className="relative z-30 -mt-16 pb-10 container mx-auto px-4" ref={ref}>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
         
         {/* Left: Lead Form Card */}
-        <div className={`bg-white rounded-2xl shadow-2xl p-6 md:p-8 lg:p-10 text-black relative overflow-hidden reveal-hidden-left ${isVisible ? 'reveal-visible-x' : ''}`}>
-            <div className="absolute top-0 left-0 w-full h-2 bg-gold" />
+        <div className={`bg-white rounded-xl shadow-xl p-4 md:p-5 text-black relative overflow-hidden reveal-hidden-left ${isVisible ? 'reveal-visible-x' : ''}`}>
+            <div className="absolute top-0 left-0 w-full h-1 bg-gold" />
             
             {!isSuccess ? (
                 <>
-                    <h3 className="text-3xl font-black uppercase tracking-tight mb-6">
+                    <h3 className="text-xl font-black uppercase tracking-tight mb-4">
                         Get a Free <span className="text-gold-dark">Plumbing Quote</span> Today
                     </h3>
                     
-                    <form onSubmit={handleSubmit} className="space-y-4">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div className="space-y-1">
-                                <label className="text-sm font-bold text-gray-700 uppercase">Your Name</label>
+                    <form onSubmit={handleSubmit} className="space-y-3">
+                        <div className="grid grid-cols-2 gap-3">
+                            <div>
+                                <label className="text-xs font-bold text-gray-600 uppercase">Your Name</label>
                                 <input 
                                     required 
                                     type="text" 
                                     placeholder="Full Name" 
-                                    className="w-full bg-gray-100 border-2 border-transparent focus:border-gold focus:bg-white rounded-lg px-4 py-3 outline-none transition-all font-medium"
+                                    className="w-full bg-gray-100 border border-transparent focus:border-gold focus:bg-white rounded px-3 py-2 text-sm outline-none transition-all"
                                 />
                             </div>
-                            <div className="space-y-1">
-                                <label className="text-sm font-bold text-gray-700 uppercase">Phone Number</label>
+                            <div>
+                                <label className="text-xs font-bold text-gray-600 uppercase">Phone Number</label>
                                 <input 
                                     required 
                                     type="tel" 
                                     placeholder="(555) 555-5555" 
-                                    className="w-full bg-gray-100 border-2 border-transparent focus:border-gold focus:bg-white rounded-lg px-4 py-3 outline-none transition-all font-medium"
+                                    className="w-full bg-gray-100 border border-transparent focus:border-gold focus:bg-white rounded px-3 py-2 text-sm outline-none transition-all"
                                 />
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                             <div className="space-y-1">
-                                <label className="text-sm font-bold text-gray-700 uppercase">Email Address</label>
+                        <div className="grid grid-cols-2 gap-3">
+                            <div>
+                                <label className="text-xs font-bold text-gray-600 uppercase">Email Address</label>
                                 <input 
                                     required 
                                     type="email" 
                                     placeholder="name@example.com" 
-                                    className="w-full bg-gray-100 border-2 border-transparent focus:border-gold focus:bg-white rounded-lg px-4 py-3 outline-none transition-all font-medium"
+                                    className="w-full bg-gray-100 border border-transparent focus:border-gold focus:bg-white rounded px-3 py-2 text-sm outline-none transition-all"
                                 />
                             </div>
-                            <div className="space-y-1">
-                                <label className="text-sm font-bold text-gray-700 uppercase">Zip Code</label>
+                            <div>
+                                <label className="text-xs font-bold text-gray-600 uppercase">Zip Code</label>
                                 <input 
                                     required 
                                     type="text" 
                                     placeholder="33101" 
-                                    className="w-full bg-gray-100 border-2 border-transparent focus:border-gold focus:bg-white rounded-lg px-4 py-3 outline-none transition-all font-medium"
+                                    className="w-full bg-gray-100 border border-transparent focus:border-gold focus:bg-white rounded px-3 py-2 text-sm outline-none transition-all"
                                 />
                             </div>
                         </div>
 
-                        <div className="space-y-1">
-                            <label className="text-sm font-bold text-gray-700 uppercase">Service Needed</label>
-                            <select className="w-full bg-gray-100 border-2 border-transparent focus:border-gold focus:bg-white rounded-lg px-4 py-3 outline-none transition-all font-medium cursor-pointer appearance-none">
+                        <div>
+                            <label className="text-xs font-bold text-gray-600 uppercase">Service Needed</label>
+                            <select className="w-full bg-gray-100 border border-transparent focus:border-gold focus:bg-white rounded px-3 py-2 text-sm outline-none transition-all cursor-pointer">
                                 <option>Residential Plumbing Services</option>
                                 <option>Commercial Plumbing Services</option>
                                 <option>Toilet Clog / Toilet Backup</option>
-                                <option>Shower Overflow</option>
                                 <option>Emergency Plumbing Services</option>
-                                <option>Hydrojet / High-Pressure Drain Cleaning</option>
-                                <option>Tankless Water Heater Install/Repair</option>
-                                <option>Camera Detection / Pipe Inspection</option>
+                                <option>Water Heater Install/Repair</option>
                                 <option>Drain Cleaning</option>
                                 <option>Other</option>
                             </select>
                         </div>
 
-                        <div className="space-y-1">
-                            <label className="text-sm font-bold text-gray-700 uppercase">Message</label>
+                        <div>
+                            <label className="text-xs font-bold text-gray-600 uppercase">Message</label>
                             <textarea 
-                                rows={3} 
+                                rows={2} 
                                 placeholder="Tell us about your issue..." 
-                                className="w-full bg-gray-100 border-2 border-transparent focus:border-gold focus:bg-white rounded-lg px-4 py-3 outline-none transition-all font-medium resize-none"
+                                className="w-full bg-gray-100 border border-transparent focus:border-gold focus:bg-white rounded px-3 py-2 text-sm outline-none transition-all resize-none"
                             ></textarea>
                         </div>
 
                         <button 
                             disabled={isSubmitting}
                             type="submit" 
-                            className="btn-primary w-full bg-gold hover:bg-gold-hover text-black font-black text-lg uppercase py-4 rounded-lg shadow-lg disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center gap-2"
+                            className="btn-primary w-full bg-gold hover:bg-gold-hover text-black font-bold text-sm uppercase py-3 rounded shadow-lg disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center gap-2"
                         >
                             {isSubmitting ? (
-                                <><Loader2 className="animate-spin" /> Sending...</>
+                                <><Loader2 className="animate-spin w-4 h-4" /> Sending...</>
                             ) : (
                                 "Submit Request"
                             )}
@@ -119,17 +116,17 @@ export default function LeadForm() {
                     </form>
                 </>
             ) : (
-                <div className="h-full min-h-[400px] flex flex-col items-center justify-center text-center space-y-4">
-                    <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-4 animate-pulse-glow">
-                        <img src="/tick-2.png" alt="Success" className="w-12 h-12 object-contain" />
+                <div className="h-full min-h-[280px] flex flex-col items-center justify-center text-center space-y-3">
+                    <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-2 animate-pulse-glow">
+                        <img src="/tick-2.png" alt="Success" className="w-8 h-8 object-contain" />
                     </div>
-                    <h3 className="text-3xl font-black uppercase">Request Received!</h3>
-                    <p className="text-gray-600 max-w-md">
-                        Thank you for contacting Authentic Plumbing Services. One of our experts will be in touch with you shortly to discuss your quote.
+                    <h3 className="text-2xl font-black uppercase">Request Received!</h3>
+                    <p className="text-gray-600 text-sm max-w-sm">
+                        Thank you for contacting Authentic Plumbing Services. One of our experts will be in touch shortly.
                     </p>
                     <button 
                         onClick={() => setIsSuccess(false)}
-                        className="text-gold font-bold underline mt-4"
+                        className="text-gold font-bold underline text-sm mt-2"
                     >
                         Send another request
                     </button>
@@ -138,7 +135,7 @@ export default function LeadForm() {
         </div>
 
         {/* Right: Crew Image Section */}
-        <div className={`relative h-full min-h-[400px] lg:min-h-auto rounded-2xl overflow-hidden shadow-2xl group reveal-hidden-right delay-200 ${isVisible ? 'reveal-visible-x' : ''}`}>
+        <div className={`relative h-[300px] lg:h-auto rounded-xl overflow-hidden shadow-xl group reveal-hidden-right delay-200 ${isVisible ? 'reveal-visible-x' : ''}`}>
              {/* Image */}
             <img 
                 src="/emergencyplumbing.png"
@@ -147,15 +144,15 @@ export default function LeadForm() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
             
-            <div className="absolute bottom-0 left-0 p-8 md:p-10 w-full">
-                <div className="bg-gold text-black text-xs font-black uppercase px-3 py-1 rounded-sm inline-block mb-3">
-                    Miami’s Trusted Plumbing Pros
+            <div className="absolute bottom-0 left-0 p-5 w-full">
+                <div className="bg-gold text-black text-[10px] font-black uppercase px-2 py-0.5 rounded-sm inline-block mb-2">
+                    Miami's Trusted Plumbing Pros
                 </div>
-                <h3 className="text-white text-3xl md:text-4xl font-bold uppercase leading-none mb-3">
-                    Expert Crew. <br/> Professional Results.
+                <h3 className="text-white text-xl md:text-2xl font-bold uppercase leading-tight mb-2">
+                    Expert Crew. Professional Results.
                 </h3>
-                <p className="text-gray-300 font-medium text-lg">
-                    Fast response times, clean work, and clear communication. We treat your home like our own.
+                <p className="text-gray-300 font-medium text-sm">
+                    Fast response times, clean work, and clear communication.
                 </p>
             </div>
         </div>
