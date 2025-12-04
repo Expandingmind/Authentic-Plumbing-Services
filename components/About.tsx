@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { ShieldCheck, Clock, Star } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
