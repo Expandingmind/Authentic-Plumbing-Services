@@ -138,7 +138,7 @@ export default function LeadForm() {
         <div className={`relative h-[300px] lg:h-auto rounded-xl overflow-hidden shadow-xl group reveal-hidden-right delay-200 ${isVisible ? 'reveal-visible-x' : ''}`}>
              {/* Image */}
             <img 
-                src="/emergencyplumbing.png"
+                src="/tick-2.png"
                 alt="Professional Plumbing Crew"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
