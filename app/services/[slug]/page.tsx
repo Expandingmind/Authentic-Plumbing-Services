@@ -123,23 +123,23 @@ const SERVICES_DATA: Record<string, any> = {
     description: "Upgrade to energy-efficient tankless systems or repair your existing water heater. We ensure you have reliable hot water when you need it most.",
     faqs: [
       {
-        question: "How long does a water heater typically last?",
+        question: "How long does a typical water heater last before needing replacement?",
         answer: "Traditional tank water heaters last 8-12 years, while tankless models can last 20+ years with proper maintenance."
       },
       {
-        question: "Should I repair or replace my water heater?",
+        question: "When should I repair vs replace my water heater?",
         answer: "If your unit is over 10 years old, leaking, or requires frequent repairs, replacement is usually the more cost-effective option."
       },
       {
-        question: "What are the benefits of a tankless water heater?",
+        question: "What are the advantages of upgrading to a tankless water heater?",
         answer: "Tankless heaters provide endless hot water, take up less space, and are more energy-efficient than traditional tank models."
       },
       {
-        question: "Do you install both electric and gas water heaters?",
+        question: "Can you install both electric and gas water heater systems?",
         answer: "Yes, we are certified to install, repair, and maintain both electric and gas water heater systems."
       },
       {
-        question: "Why is my water heater making a popping noise?",
+        question: "My water heater is making strange popping noises - what does this mean?",
         answer: "Popping sounds often indicate sediment buildup in the tank. Flushing the tank usually resolves this issue."
       }
     ]
