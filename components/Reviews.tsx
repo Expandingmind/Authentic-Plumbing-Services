@@ -36,17 +36,17 @@ export default function Reviews() {
       </div>
 
       <div className="relative w-full">
-        <div className="flex gap-2 animate-marquee w-max px-4">
+        <div className="flex gap-1.5 md:gap-2 animate-marquee w-max px-4">
           {CAROUSEL_REVIEWS.map((review, index) => (
-            <div key={`${review.id}-${index}`} className="w-[200px] md:w-[240px] bg-gray-50 p-2.5 md:p-3 rounded-lg border border-gray-100 whitespace-normal">
-               <div className="flex items-center justify-between mb-1.5">
+            <div key={`${review.id}-${index}`} className="w-[140px] md:w-[220px] bg-gray-50 p-2 md:p-3 rounded-lg border border-gray-100 whitespace-normal">
+               <div className="flex items-center justify-between mb-1">
                   <div className="flex gap-0.5">{[...Array(review.rating)].map((_, i) => <Star key={i} className="w-2 h-2 fill-gold text-gold" />)}</div>
-                  <span className="text-[8px] font-bold text-gray-400">{review.date}</span>
+                  <span className="text-[7px] md:text-[8px] font-bold text-gray-400">{review.date}</span>
                </div>
-               <p className="text-gray-700 mb-2 leading-snug text-[10px] md:text-[11px] min-h-[36px]">"{review.text}"</p>
-               <div className="flex items-center gap-1.5">
-                  <div className="w-5 h-5 bg-zinc-200 rounded-full flex items-center justify-center text-[8px] font-black text-gray-500">{review.initials}</div>
-                  <span className="font-bold text-[9px] uppercase">{review.name}</span>
+               <p className="text-gray-700 mb-1.5 leading-snug text-[9px] md:text-[11px] min-h-[28px] md:min-h-[36px] line-clamp-3">"{review.text}"</p>
+               <div className="flex items-center gap-1">
+                  <div className="w-4 h-4 md:w-5 md:h-5 bg-zinc-200 rounded-full flex items-center justify-center text-[7px] md:text-[8px] font-black text-gray-500">{review.initials}</div>
+                  <span className="font-bold text-[8px] md:text-[9px] uppercase">{review.name}</span>
                </div>
             </div>
           ))}

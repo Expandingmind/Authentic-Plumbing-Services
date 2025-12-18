@@ -36,14 +36,14 @@ export default function Gallery() {
            </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-1.5 md:gap-2">
+        <div className="grid grid-cols-3 gap-1 md:gap-2">
             {filteredProjects.map((project, idx) => (
                 <div key={project.id} className={`group relative overflow-hidden rounded cursor-pointer reveal-hidden ${isVisible ? 'reveal-visible' : ''}`} style={{ transitionDelay: `${idx * 25}ms` }}>
-                    <div className="aspect-[4/3] overflow-hidden bg-gray-200">
+                    <div className="aspect-square overflow-hidden bg-gray-200">
                         <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-end p-1.5 md:p-2">
-                        <h3 className="text-white font-bold text-[8px] md:text-[10px] leading-tight">{project.title}</h3>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-end p-1 md:p-2">
+                        <h3 className="text-white font-bold text-[7px] md:text-[10px] leading-tight">{project.title}</h3>
                     </div>
                 </div>
             ))}

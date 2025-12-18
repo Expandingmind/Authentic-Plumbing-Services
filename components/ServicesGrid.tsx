@@ -38,16 +38,16 @@ export default function ServicesGrid() {
 
             {/* Right Grid */}
             <div className="lg:w-2/3 w-full">
-                <div className="grid grid-cols-2 gap-1.5 md:gap-2">
+                <div className="grid grid-cols-2 gap-1 md:gap-2">
                     {SERVICES.map((service, idx) => (
                         <Link href={`/services/${service.slug}`} key={idx} 
-                            className={`group relative h-[90px] sm:h-[110px] md:h-[140px] lg:h-[160px] overflow-hidden border border-white/10 hover:border-gold/50 transition-all duration-300 block reveal-hidden ${isVisible ? 'reveal-visible' : ''}`}
+                            className={`group relative h-[70px] sm:h-[90px] md:h-[130px] lg:h-[150px] overflow-hidden border border-white/10 hover:border-gold/50 transition-all duration-300 block reveal-hidden ${isVisible ? 'reveal-visible' : ''}`}
                             style={{ transitionDelay: `${idx * 50}ms` }}>
                             <img src={service.image} alt={service.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-60" />
-                            <div className="absolute top-1.5 left-1.5 md:top-2 md:left-2 bg-white/10 backdrop-blur-md p-0.5 md:p-1 rounded border border-white/20">{service.icon}</div>
-                            <div className="absolute bottom-0 left-0 w-full bg-blue-600 text-white text-center py-1.5 md:py-2 font-bold text-[9px] md:text-[11px] uppercase transform translate-y-full group-hover:translate-y-0 transition-transform duration-200 z-20">{service.title}</div>
-                            <div className="absolute bottom-0 left-0 w-full bg-black/80 text-white text-center py-1.5 md:py-2 font-bold text-[9px] md:text-[11px] uppercase transform translate-y-0 group-hover:translate-y-full transition-transform duration-200 z-10">{service.title}</div>
+                            <div className="absolute top-1 left-1 md:top-2 md:left-2 bg-white/10 backdrop-blur-md p-0.5 md:p-1 rounded border border-white/20">{service.icon}</div>
+                            <div className="absolute bottom-0 left-0 w-full bg-blue-600 text-white text-center py-1 md:py-2 font-bold text-[8px] md:text-[11px] uppercase transform translate-y-full group-hover:translate-y-0 transition-transform duration-200 z-20">{service.title}</div>
+                            <div className="absolute bottom-0 left-0 w-full bg-black/80 text-white text-center py-1 md:py-2 font-bold text-[8px] md:text-[11px] uppercase transform translate-y-0 group-hover:translate-y-full transition-transform duration-200 z-10">{service.title}</div>
                         </Link>
                     ))}
                 </div>

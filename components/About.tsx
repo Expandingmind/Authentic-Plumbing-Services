@@ -27,18 +27,18 @@ export default function About() {
                 <p className="text-gray-300 text-[11px] md:text-xs leading-relaxed">Locally owned plumbing company serving Miami, FL. Quality solutions with honesty and clear communication.</p>
             </div>
 
-            <div className="grid grid-cols-3 gap-1.5 md:gap-2">
-                <div className="flex flex-col items-center gap-0.5 p-1.5 md:p-2 bg-zinc-900 rounded border border-zinc-800 text-center">
-                    <ShieldCheck className="w-4 h-4 md:w-5 md:h-5 text-gold" />
-                    <span className="font-bold text-[9px] md:text-[10px] uppercase">Licensed</span>
+            <div className="grid grid-cols-3 gap-1 md:gap-2">
+                <div className="flex flex-col items-center gap-0.5 p-1 md:p-2 bg-zinc-900 rounded border border-zinc-800 text-center">
+                    <ShieldCheck className="w-3 h-3 md:w-5 md:h-5 text-gold" />
+                    <span className="font-bold text-[8px] md:text-[10px] uppercase">Licensed</span>
                 </div>
-                <div className="flex flex-col items-center gap-0.5 p-1.5 md:p-2 bg-zinc-900 rounded border border-zinc-800 text-center">
-                    <Clock className="w-4 h-4 md:w-5 md:h-5 text-gold" />
-                    <span className="font-bold text-[9px] md:text-[10px] uppercase">Fast</span>
+                <div className="flex flex-col items-center gap-0.5 p-1 md:p-2 bg-zinc-900 rounded border border-zinc-800 text-center">
+                    <Clock className="w-3 h-3 md:w-5 md:h-5 text-gold" />
+                    <span className="font-bold text-[8px] md:text-[10px] uppercase">Fast</span>
                 </div>
-                <div className="flex flex-col items-center gap-0.5 p-1.5 md:p-2 bg-zinc-900 rounded border border-zinc-800 text-center">
-                    <Star className="w-4 h-4 md:w-5 md:h-5 text-gold" />
-                    <span className="font-bold text-[9px] md:text-[10px] uppercase">5-Star</span>
+                <div className="flex flex-col items-center gap-0.5 p-1 md:p-2 bg-zinc-900 rounded border border-zinc-800 text-center">
+                    <Star className="w-3 h-3 md:w-5 md:h-5 text-gold" />
+                    <span className="font-bold text-[8px] md:text-[10px] uppercase">5-Star</span>
                 </div>
             </div>
 
