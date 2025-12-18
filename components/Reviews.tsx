@@ -43,7 +43,7 @@ export default function Reviews() {
                   <div className="flex gap-0.5">{[...Array(review.rating)].map((_, i) => <Star key={i} className="w-2 h-2 fill-gold text-gold" />)}</div>
                   <span className="text-[7px] md:text-[8px] font-bold text-gray-400">{review.date}</span>
                </div>
-               <p className="text-gray-700 mb-1.5 leading-snug text-[9px] md:text-[11px] min-h-[28px] md:min-h-[36px] line-clamp-3">"{review.text}"</p>
+               <p className="text-gray-700 mb-1.5 leading-snug text-[9px] md:text-[11px] min-h-[28px] md:min-h-[36px] line-clamp-3">&quot;{review.text}&quot;</p>
                <div className="flex items-center gap-1">
                   <div className="w-4 h-4 md:w-5 md:h-5 bg-zinc-200 rounded-full flex items-center justify-center text-[7px] md:text-[8px] font-black text-gray-500">{review.initials}</div>
                   <span className="font-bold text-[8px] md:text-[9px] uppercase">{review.name}</span>

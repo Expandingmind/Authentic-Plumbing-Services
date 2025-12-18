@@ -61,7 +61,7 @@ export default function LeadForm() {
                         <img src="/tick-2.png" alt="Success" className="w-6 h-6 object-contain" />
                     </div>
                     <h3 className="text-base font-black uppercase">Request Received!</h3>
-                    <p className="text-gray-600 text-[11px]">We'll contact you shortly.</p>
+                    <p className="text-gray-600 text-[11px]">We&apos;ll contact you shortly.</p>
                     <button onClick={() => setIsSuccess(false)} className="text-gold font-bold underline text-[11px]">Send another</button>
                 </div>
             )}
@@ -72,7 +72,7 @@ export default function LeadForm() {
             <img src="/tick-2.png" alt="Plumbing Crew" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
             <div className="absolute bottom-0 left-0 p-2 md:p-3 w-full">
-                <div className="bg-gold text-black text-[8px] font-black uppercase px-1.5 py-0.5 rounded-sm inline-block mb-1">Miami's Trusted Pros</div>
+                <div className="bg-gold text-black text-[8px] font-black uppercase px-1.5 py-0.5 rounded-sm inline-block mb-1">Miami&apos;s Trusted Pros</div>
                 <h3 className="text-white text-sm md:text-base font-bold uppercase leading-tight">Expert Crew. Professional Results.</h3>
             </div>
         </div>

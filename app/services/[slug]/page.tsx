@@ -262,7 +262,7 @@ export default async function ServicePage({ params }: { params: { slug: string }
                         Frequently Asked Questions – <br/> {service.title}
                     </h2>
                     <p className="text-gray-600 mb-6">
-                        Find answers to all your questions about our professional services. Whether you're upgrading or repairing, we have the details you need.
+                        Find answers to all your questions about our professional services. Whether you&apos;re upgrading or repairing, we have the details you need.
                     </p>
                     <div className="flex gap-4">
                         <Link href="/#contact" className="bg-blue-600 text-white px-6 py-3 rounded-full font-bold uppercase text-sm">Call Now</Link>
